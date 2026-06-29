@@ -6,9 +6,13 @@
    <STARTING_FOLDER>/src/</STARTING_FOLDER>
    <FOLDER_LOGIC>PREFIX</FOLDER_LOGIC>
    <IGNORE>
-    <item>
+   <item>
      <PATH>/</PATH>
      <FILENAME>README.md</FILENAME>
+    </item>
+    <item>
+     <PATH>/</PATH>
+     <FILENAME>.project</FILENAME>
     </item>
    </IGNORE>
   </DATA>

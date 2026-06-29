@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>sap-ai-practices</name>
+	<comment>ABAP Git repository for Material Master REST API</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.egit.core.GitProvider</nature>
+	</natures>
+</projectDescription>
