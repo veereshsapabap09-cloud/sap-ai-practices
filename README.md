@@ -1,20 +1,20 @@
-# ESS Accelerator — ZABAP_GIT (PoC)
+# ZRAP_DEMO_ — Department and Employee RAP Demo
 
-This repository contains the ESS Accelerator skeleton and artifacts for a RAP-based Employee Self Service framework.
+This repository contains an end-to-end SAP S/4HANA RAP sample application "Department and Employee Management" intended for learning and abapGit integration.
 
-Structure:
-- docs/: Architecture and PlantUML diagrams
-- src/: ABAP source artifacts by layer
-  - ddic/: Domain and table templates (DDIC)
-  - cds/: CDS views (Phase 4)
-  - bdef/: Behavior definitions (Phase 5)
-  - bimpl/: Behavior implementations (Phase 6)
-  - services/: Business service layer classes
-  - classes/: Shared classes
-  - workflow/: Workflow metadata
-  - test/: Unit tests and test data
-- .abapgit.xml: ABAPGit manifest (skeleton)
+Package: ZABAP_GIT
+Prefix: ZRAP_DEMO_
 
-Quick start
-1. Import DDIC artifacts into ADT (create domains/data elements/tables) using the templates in ESS/src/ddic/ (recommended Workflow A: create in ADT then abapGit-export).
-2. When Phase 4 is approved, add CDS sources under ESS/src/cds/ and follow the Phase plan.
+Phased implementation:
+- Phase 1: Repository skeleton and documentation (this commit)
+- Phase 2: Transparent tables (DDIC)
+- Phase 3: CDS interface views
+- Phase 4: Projection views
+- Phase 5: Behavior definitions
+- Phase 6: Behavior implementations and ABAP classes
+- Phase 7: Metadata extensions (UI)
+- Phase 8: Service definition
+- Phase 9: OData V4 service binding
+- Phase 10: Unit tests and final docs
+
+See docs/ for more details and the per-phase plan.

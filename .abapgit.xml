@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="1.0">
+  <repo>
+    <name>sap-ai-practices</name>
+    <url>https://github.com/veereshsapabap09-cloud/sap-ai-practices</url>
+    <author>veereshsapabap09-cloud</author>
+    <description>AI - Practice: RAP Department/Employee demo skeleton</description>
+    <version>1</version>
+  </repo>
+</abapGit>
