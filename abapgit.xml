@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="1.0.0">
+  <repo>
+    <name>sap-ai-practices/ess-accelerator</name>
+    <caption>ESS Accelerator — ZABAP_GIT</caption>
+    <description>ESS Accelerator repository (DDIC baseline and skeleton). Package: ZABAP_GIT</description>
+    <package>ZABAP_GIT</package>
+    <objects>
+      <!-- ABAP objects will be added after ADT creation and abapGit export. -->
+    </objects>
+  </repo>
+</abapGit>
