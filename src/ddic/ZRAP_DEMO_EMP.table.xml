@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ZRAP_DEMO_EMP table definition (Phase 2) -->
+<abapGit version="1.0">
+  <dict>
+    <table>
+      <name>ZRAP_DEMO_EMP</name>
+      <description>Employees (child entity for RAP demo)</description>
+      <package>ZABAP_GIT</package>
+      <fields>
+        <field>
+          <name>DEPARTMENTID</name>
+          <position>1</position>
+          <datatype>CHAR</datatype>
+          <length>10</length>
+          <decimals>0</decimals>
+          <key>1</key>
+          <not_null>1</not_null>
+          <description>Department Identifier (FK to ZRAP_DEMO_DEPT)</description>
+        </field>
+        <field>
+          <name>EMPLOYEEID</name>
+          <position>2</position>
+          <datatype>CHAR</datatype>
+          <length>10</length>
+          <decimals>0</decimals>
+          <key>1</key>
+          <not_null>1</not_null>
+          <description>Employee Identifier (late-numbered)</description>
+        </field>
+        <field>
+          <name>EMPLOYEENAME</name>
+          <position>3</position>
+          <datatype>CHAR</datatype>
+          <length>100</length>
+          <decimals>0</decimals>
+          <not_null>1</not_null>
+          <description>Employee full name</description>
+        </field>
+        <field>
+          <name>EMAIL</name>
+          <position>4</position>
+          <datatype>CHAR</datatype>
+          <length>241</length>
+          <decimals>0</decimals>
+          <description>Email address</description>
+        </field>
+        <field>
+          <name>PHONE</name>
+          <position>5</position>
+          <datatype>CHAR</datatype>
+          <length>20</length>
+          <decimals>0</decimals>
+          <description>Phone number</description>
+        </field>
+        <field>
+          <name>DESIGNATION</name>
+          <position>6</position>
+          <datatype>CHAR</datatype>
+          <length>40</length>
+          <decimals>0</decimals>
+          <description>Job title / designation</description>
+        </field>
+        <field>
+          <name>SALARY</name>
+          <position>7</position>
+          <datatype>DEC</datatype>
+          <length>15</length>
+          <decimals>2</decimals>
+          <description>Salary amount</description>
+        </field>
+        <field>
+          <name>JOININGDATE</name>
+          <position>8</position>
+          <datatype>DATS</datatype>
+          <length>8</length>
+          <decimals>0</decimals>
+          <description>Joining date</description>
+        </field>
+        <field>
+          <name>ACTIVE</name>
+          <position>9</position>
+          <datatype>CHAR</datatype>
+          <length>1</length>
+          <decimals>0</decimals>
+          <description>Active flag (X/N or A/I)</description>
+        </field>
+        <field>
+          <name>CREATEDBY</name>
+          <position>10</position>
+          <datatype>CHAR</datatype>
+          <length>12</length>
+          <decimals>0</decimals>
+          <description>Created by (user)</description>
+        </field>
+        <field>
+          <name>CREATEDON</name>
+          <position>11</position>
+          <datatype>DATS</datatype>
+          <length>8</length>
+          <decimals>0</decimals>
+          <description>Created on (date)</description>
+        </field>
+        <field>
+          <name>CHANGEDBY</name>
+          <position>12</position>
+          <datatype>CHAR</datatype>
+          <length>12</length>
+          <decimals>0</decimals>
+          <description>Changed by (user)</description>
+        </field>
+        <field>
+          <name>CHANGEDON</name>
+          <position>13</position>
+          <datatype>DATS</datatype>
+          <length>8</length>
+          <decimals>0</decimals>
+          <description>Changed on (date)</description>
+        </field>
+      </fields>
+      <indexes/>
+      <foreign_keys>
+        <foreign_key>
+          <name>FK_DEPT_EMP</name>
+          <check_table>ZRAP_DEMO_DEPT</check_table>
+          <fields>
+            <field>DEPARTMENTID</field>
+          </fields>
+        </foreign_key>
+      </foreign_keys>
+    </table>
+  </dict>
+</abapGit>
