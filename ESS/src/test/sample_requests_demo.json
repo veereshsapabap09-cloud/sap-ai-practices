@@ -1,0 +1,38 @@
+[
+  {
+    "REQUEST_UUID": "00000000000000000000000000000001",
+    "REQUEST_NUMBER": null,
+    "REQUEST_TYPE": "LEAVE",
+    "EMPLOYEE_ID": "00001000",
+    "TITLE": "Annual leave - Sep 2026",
+    "POSTING_DATE": "2026-08-06",
+    "STATUS": "DRAFT",
+    "IS_DRAFT": "Y",
+    "JSON_METADATA": "{\"ui\":{\"facet\":\"leave\"}}",
+    "LEAVE": {
+      "LEAVE_TYPE": "ANNUAL",
+      "FROM_DATE": "2026-09-01",
+      "TO_DATE": "2026-09-05",
+      "NUMBER_OF_DAYS": 5.0,
+      "REASON": "Conference"
+    }
+  },
+  {
+    "REQUEST_UUID": "00000000000000000000000000000002",
+    "REQUEST_NUMBER": null,
+    "REQUEST_TYPE": "LEAVE",
+    "EMPLOYEE_ID": "00002000",
+    "TITLE": "Sick leave - Aug 2026",
+    "POSTING_DATE": "2026-08-10",
+    "STATUS": "DRAFT",
+    "IS_DRAFT": "Y",
+    "JSON_METADATA": "{\"ui\":{\"facet\":\"leave\"}}",
+    "LEAVE": {
+      "LEAVE_TYPE": "SICK",
+      "FROM_DATE": "2026-08-15",
+      "TO_DATE": "2026-08-17",
+      "NUMBER_OF_DAYS": 3.0,
+      "REASON": "Medical"
+    }
+  }
+]
