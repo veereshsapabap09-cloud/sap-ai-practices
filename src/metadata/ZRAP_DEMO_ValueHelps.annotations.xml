@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Annotations Namespace="ZRAP_DEMO">
+  <!-- Value Helps and static picklists -->
+
+  <!-- Status value help: maps single-char codes to descriptions -->
+  <Annotation Target="ZRAP_DEMO::V_ZRAP_DEMO_STATUS" Term="UI.Filterable"/>
+
+  <!-- Designation value help -->
+  <Annotation Target="ZRAP_DEMO::V_ZRAP_DEMO_DESIGNATION" Term="UI.Filterable"/>
+
+  <!-- Manager value help: use Employees projection for lookup -->
+  <Annotation Target="ZRAP_DEMO::P_ZRAP_DEMO_DEPT/Manager" Term="Common.ValueList">
+    <Record>
+      <PropertyValue Property="CollectionPath" String="_Employees"/>
+      <PropertyValue Property="SearchSupported" Bool="true"/>
+      <PropertyValue Property="Parameters">
+        <Collection>
+          <Record>
+            <PropertyValue Property="LocalDataProperty" String="Manager"/>
+            <PropertyValue Property="ValueListProperty" String="EmployeeID"/>
+          </Record>
+        </Collection>
+      </PropertyValue>
+    </Record>
+  </Annotation>
+
+</Annotations>
