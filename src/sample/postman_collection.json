@@ -1,0 +1,60 @@
+{
+  "info": {
+    "name": "ZRAP_DEMO_SRV Postman Collection",
+    "_postman_id": "zr-dept-collection",
+    "description": "Postman collection with sample requests for ZRAP_DEMO_SRV OData V4 service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get $metadata",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/sap/opu/odata4/sap/ZRAP_DEMO_SRV/$metadata",
+          "host": ["{{baseUrl}}"],
+          "path": ["sap","opu","odata4","sap","ZRAP_DEMO_SRV","$metadata"]
+        }
+      }
+    },
+    {
+      "name": "Read Departments",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/sap/opu/odata4/sap/ZRAP_DEMO_SRV/Departments",
+          "host": ["{{baseUrl}}"],
+          "path": ["sap","opu","odata4","sap","ZRAP_DEMO_SRV","Departments"]
+        }
+      }
+    },
+    {
+      "name": "Create Department (Draft)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key":"Content-Type","value":"application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"DepartmentName\": \"Research\", \"Manager\": \"\" }"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/sap/opu/odata4/sap/ZRAP_DEMO_SRV/Departments",
+          "host": ["{{baseUrl}}"],
+          "path": ["sap","opu","odata4","sap","ZRAP_DEMO_SRV","Departments"]
+        }
+      }
+    },
+    {
+      "name": "Copy Department (Action)",
+      "request": {
+        "method": "POST",
+        "header": [{"key":"Content-Type","value":"application/json"}],
+        "body": {"mode":"raw","raw": "{ \"DepartmentID\": \"D0001\" }"},
+        "url": {"raw":"{{baseUrl}}/sap/opu/odata4/sap/ZRAP_DEMO_SRV/Departments/$action/CopyDepartment","host":["{{baseUrl}}"],"path":["sap","opu","odata4","sap","ZRAP_DEMO_SRV","Departments","$action","CopyDepartment"]}
+      }
+    }
+  ]
+}
