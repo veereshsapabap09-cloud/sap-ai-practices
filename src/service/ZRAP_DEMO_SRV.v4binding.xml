@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service-binding>
+  <metadata>
+    <service>ZRAP_DEMO_SRV</service>
+    <bindingType>ODataV4</bindingType>
+    <package>ZABAP_GIT</package>
+    <description>OData V4 binding for ZRAP_DEMO_SRV</description>
+  </metadata>
+
+  <configuration>
+    <path>/sap/opu/odata4/sap/ZRAP_DEMO_SRV/</path>
+    <exposeMetadata>true</exposeMetadata>
+    <enableCors>false</enableCors>
+  </configuration>
+
+  <mappings>
+    <entitySet name="Departments" projection="P_ZRAP_DEMO_DEPT"/>
+    <entitySet name="Employees" projection="P_ZRAP_DEMO_EMP"/>
+  </mappings>
+
+  <actions>
+    <action name="ActivateDepartment" binding="entity" enableForUI="true"/>
+    <action name="CloseDepartment" binding="entity" enableForUI="true"/>
+    <action name="ReopenDepartment" binding="entity" enableForUI="true"/>
+    <action name="CopyDepartment" binding="collection" enableForUI="true"/>
+    <action name="PromoteEmployee" binding="entity" enableForUI="true"/>
+    <action name="DeactivateEmployee" binding="entity" enableForUI="true"/>
+  </actions>
+
+  <notes>
+    <!-- After importing into the ABAP system, activate this binding to publish the OData endpoint. -->
+    <!-- Ensure that authorization and ICF/SICF settings are configured appropriately in the backend. -->
+  </notes>
+</service-binding>

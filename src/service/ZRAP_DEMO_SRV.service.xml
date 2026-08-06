@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service-definition>
+  <metadata>
+    <name>ZRAP_DEMO_SRV</name>
+    <package>ZABAP_GIT</package>
+    <title>ZRAP Demo Service</title>
+    <description>OData V4 service exposing Departments and Employees (managed, draft-enabled)</description>
+    <author>veereshsapabap09-cloud</author>
+  </metadata>
+
+  <!-- Exposed entity projections -->
+  <entity-sets>
+    <entity-set name="Departments" projection="P_ZRAP_DEMO_DEPT"/>
+    <entity-set name="Employees" projection="P_ZRAP_DEMO_EMP"/>
+  </entity-sets>
+
+  <!-- Navigation sets -->
+  <navigations>
+    <navigation source="Departments" target="Employees" path="_Employees"/>
+  </navigations>
+
+  <!-- Service capabilities -->
+  <capabilities>
+    <capability name="Draft" supported="true"/>
+    <capability name="Expand" supported="true"/>
+    <capability name="Filter" supported="true"/>
+    <capability name="Sort" supported="true"/>
+    <capability name="Select" supported="true"/>
+    <capability name="Actions" supported="true"/>
+  </capabilities>
+
+  <!-- Action exposure mapping: maps behavior actions to OData actions -->
+  <actions>
+    <action name="ActivateDepartment" binding="entity" entitySet="Departments" behaviorAction="ActivateDepartment"/>
+    <action name="CloseDepartment" binding="entity" entitySet="Departments" behaviorAction="CloseDepartment"/>
+    <action name="ReopenDepartment" binding="entity" entitySet="Departments" behaviorAction="ReopenDepartment"/>
+    <action name="CopyDepartment" binding="collection" entitySet="Departments" behaviorAction="CopyDepartment"/>
+
+    <action name="PromoteEmployee" binding="entity" entitySet="Employees" behaviorAction="PromoteEmployee"/>
+    <action name="DeactivateEmployee" binding="entity" entitySet="Employees" behaviorAction="DeactivateEmployee"/>
+  </actions>
+
+  <!-- Notes: The service definition assumes the behavior and projections are active in the ABAP backend. -->
+</service-definition>

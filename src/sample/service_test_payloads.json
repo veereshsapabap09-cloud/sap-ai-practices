@@ -1,0 +1,13 @@
+{
+  "create_department": {
+    "DepartmentName": "Research",
+    "Manager": ""
+  },
+  "copy_department_action": {
+    "DepartmentID": "D0001"
+  },
+  "promote_employee_action": {
+    "DepartmentID": "D0001",
+    "EmployeeID": "E0001"
+  }
+}
