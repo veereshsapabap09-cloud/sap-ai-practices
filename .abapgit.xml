@@ -7,4 +7,10 @@
     <description>AI - Practice: RAP Department/Employee demo skeleton</description>
     <version>1</version>
   </repo>
+  <folders>
+    <folder>
+      <path>src</path>
+      <package>ZABAP_GIT</package>
+    </folder>
+  </folders>
 </abapGit>
