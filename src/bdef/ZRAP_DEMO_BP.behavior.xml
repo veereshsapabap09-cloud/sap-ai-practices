@@ -7,7 +7,7 @@
 -->
 <behavior-definition>
   <metadata>
-    <package>ZABAP_GIT</package>
+    <package>ZRAP_DEMO</package>
     <prefix>ZRAP_DEMO_</prefix>
     <description>Behavior Definition: Department/Employee RAP demo (managed, draft-enabled)</description>
     <author>veereshsapabap09-cloud</author>
