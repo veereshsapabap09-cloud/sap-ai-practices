@@ -9,7 +9,7 @@ CLASS zt_demo_action_test IMPLEMENTATION.
   METHOD test_copy_department.
     " Create a temp department
     DATA(lv_deptid) = zrap_demo_numgen=>generate_department_id( ).
-    DATA(ls_dept) = VALUE zrap_demo_dept( 
+    DATA(ls_dept) = VALUE zrap_demo_dept(
       departmentid = lv_deptid
       departmentname = 'UT Dept'
       manager = ''

@@ -21,26 +21,11 @@ CLASS zrap_demo_bp DEFINITION PUBLIC FINAL CREATE PUBLIC.
     CLASS-METHODS validate_email
       IMPORTING iv_email TYPE string
       RETURNING VALUE(rv_error) TYPE string.
+protected section.
+private section.
 ENDCLASS.
 
-CLASS zrap_demo_bp IMPLEMENTATION.
-  METHOD generate_department_id.
-    rv_id = zrap_demo_numgen=>generate_department_id( ).
-  ENDMETHOD.
 
-  METHOD generate_employee_id.
-    rv_id = zrap_demo_numgen=>generate_employee_id( ).
-  ENDMETHOD.
 
-  METHOD populate_audit_fields.
-    rt_audit = zrap_demo_util=>populate_audit_fields( ).
-  ENDMETHOD.
-
-  METHOD validate_salary.
-    rv_error = zrap_demo_val=>validate_salary( iv_salary = iv_salary ).
-  ENDMETHOD.
-
-  METHOD validate_email.
-    rv_error = zrap_demo_val=>validate_email( iv_email = iv_email ).
-  ENDMETHOD.
+CLASS ZRAP_DEMO_BP IMPLEMENTATION.
 ENDCLASS.
