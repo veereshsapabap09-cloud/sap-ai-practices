@@ -1,0 +1,19 @@
+unmanaged implementation in class zrap_abap_pvt_bp_employee unique;
+strict(2);
+
+define behavior for ZRAP_ABAP_PVT_C_EMPLOYEE alias Employee
+lock master
+authorization master( instance )
+etag master ValidityEndDate
+{
+  // Deliberately no create/update/delete: PA0001/PA0002/PA0000 are standard
+  // HR infotype tables, and there is no verified-safe standard API wired up
+  // in this PoC for writing to them (see README "Update mechanism" and
+  // "Known limitations"). Per the read-only fallback instruction, the
+  // entity stays query-only; "update permitted information" is instead
+  // demonstrated via requestCorrection below, which records a correction
+  // request rather than writing to the infotype directly.
+
+  action ( features : instance ) checkDataQuality result [1] $self;
+  action ( features : instance ) requestCorrection result [1] $self;
+}
