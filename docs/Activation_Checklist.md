@@ -9,4 +9,4 @@ Activation Checklist
 7. Activate ABAP classes (src/classes/*) and behavior pool (src/bimpl/*)
 8. Activate metadata annotations (src/metadata/*)
 9. Activate service definition and binding (src/service/*)
-10. Test endpoints using Postman or curl (see src/sample/)
+10. Test endpoints using Postman or curl (see docs/postman_collection.json and docs/curl_examples.md)
