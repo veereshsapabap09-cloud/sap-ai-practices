@@ -2,7 +2,7 @@
 <service-definition>
   <metadata>
     <name>ZRAP_DEMO_SRV</name>
-    <package>ZABAP_GIT</package>
+    <package>ZRAP_DEMO</package>
     <title>ZRAP Demo Service</title>
     <description>OData V4 service exposing Departments and Employees (managed, draft-enabled)</description>
     <author>veereshsapabap09-cloud</author>

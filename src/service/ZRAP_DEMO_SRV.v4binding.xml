@@ -3,7 +3,7 @@
   <metadata>
     <service>ZRAP_DEMO_SRV</service>
     <bindingType>ODataV4</bindingType>
-    <package>ZABAP_GIT</package>
+    <package>ZRAP_DEMO</package>
     <description>OData V4 binding for ZRAP_DEMO_SRV</description>
   </metadata>
 

@@ -5,7 +5,7 @@
     <table>
       <name>ZRAP_DEMO_DEPT</name>
       <description>Departments (root entity for RAP demo)</description>
-      <package>ZABAP_GIT</package>
+      <package>ZRAP_DEMO</package>
       <fields>
         <field>
           <name>DEPARTMENTID</name>

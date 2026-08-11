@@ -10,7 +10,7 @@
   <folders>
     <folder>
       <path>src</path>
-      <package>ZABAP_GIT</package>
+      <package>ZRAP_DEMO</package>
     </folder>
   </folders>
 </abapGit>

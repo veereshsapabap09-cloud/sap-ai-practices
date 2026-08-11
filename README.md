@@ -2,7 +2,7 @@
 
 This repository contains an end-to-end SAP S/4HANA RAP sample application "Department and Employee Management" intended for learning and abapGit integration.
 
-Package: ZABAP_GIT
+Package: ZRAP_DEMO
 Prefix: ZRAP_DEMO_
 
 Phased implementation:
