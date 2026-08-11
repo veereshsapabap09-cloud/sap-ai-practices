@@ -1,0 +1,86 @@
+@Metadata.layer: #CORE
+annotate view ZRAP_ABAP_PVT_C_EMPLOYEE with
+{
+  @UI.headerInfo: {
+    typeName: 'Employee',
+    typeNamePlural: 'Employees',
+    title: { type: #STANDARD, value: 'FullName' },
+    description: { type: #STANDARD, value: 'PersonnelNumber' }
+  }
+
+  // Object page facets. Additional facets (Address/Communication, Bank
+  // Information, future HR infotypes) are added here as new field groups
+  // are introduced -- no change to the projection view required.
+  @UI.facet: [
+    { id: 'PersonalInfo', type: #FIELDGROUP_REFERENCE, label: 'Personal Information', targetQualifier: 'PersonalInfo', position: 10 },
+    { id: 'OrgInfo', type: #FIELDGROUP_REFERENCE, label: 'Organizational Information', targetQualifier: 'OrgInfo', position: 20 }
+  ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  PersonnelNumber;
+
+  @UI.lineItem: [{ position: 20 }]
+  FullName;
+
+  @UI.fieldGroup: [{ qualifier: 'PersonalInfo', position: 10 }]
+  @UI.identification: [{ position: 20 }]
+  LastName;
+
+  @UI.fieldGroup: [{ qualifier: 'PersonalInfo', position: 20 }]
+  @UI.identification: [{ position: 30 }]
+  FirstName;
+
+  @UI.fieldGroup: [{ qualifier: 'PersonalInfo', position: 30 }]
+  DateOfBirth;
+
+  @UI.fieldGroup: [{ qualifier: 'PersonalInfo', position: 40 }]
+  Gender;
+
+  @UI.fieldGroup: [{ qualifier: 'PersonalInfo', position: 50 }]
+  Nationality;
+
+  @UI.fieldGroup: [{ qualifier: 'PersonalInfo', position: 60 }]
+  MaritalStatus;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.fieldGroup: [{ qualifier: 'OrgInfo', position: 10 }]
+  PersonnelArea;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.fieldGroup: [{ qualifier: 'OrgInfo', position: 20 }]
+  PersonnelSubarea;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.fieldGroup: [{ qualifier: 'OrgInfo', position: 30 }]
+  EmployeeGroup;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.fieldGroup: [{ qualifier: 'OrgInfo', position: 40 }]
+  EmployeeSubgroup;
+
+  // Org-unit column: filterable (selection field) so it can drive the F4
+  // organization-unit input requested for the employee list.
+  @UI.lineItem: [{ position: 70 }]
+  @UI.fieldGroup: [{ qualifier: 'OrgInfo', position: 50 }]
+  @UI.selectionField: [{ position: 10 }]
+  OrganizationalUnit;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.fieldGroup: [{ qualifier: 'OrgInfo', position: 60 }]
+  Position;
+
+  @UI.fieldGroup: [{ qualifier: 'OrgInfo', position: 70 }]
+  CostCenter;
+
+  @UI.fieldGroup: [{ qualifier: 'OrgInfo', position: 80 }]
+  PayrollArea;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.selectionField: [{ position: 20 }]
+  EmploymentStatus;
+
+  @UI.lineItem: [{ position: 100 }]
+  @EndUserText.label: 'Missing Info'
+  HasMissingInformation;
+}
