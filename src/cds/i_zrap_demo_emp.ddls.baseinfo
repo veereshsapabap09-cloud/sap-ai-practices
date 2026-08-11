@@ -1,0 +1,7 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "ZRAP_DEMO_EMP"
+    ]
+  }
+}

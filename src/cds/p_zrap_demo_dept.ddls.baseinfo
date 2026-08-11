@@ -1,0 +1,7 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "I_ZRAP_DEMO_DEPT"
+    ]
+  }
+}
