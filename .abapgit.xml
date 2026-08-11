@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <abapGit version="1.0">
-  <repo>
-    <name>sap-ai-practices</name>
-    <url>https://github.com/veereshsapabap09-cloud/sap-ai-practices</url>
-    <author>veereshsapabap09-cloud</author>
-    <description>AI - Practice: RAP Department/Employee demo skeleton</description>
-    <version>1</version>
-  </repo>
-  <folders>
-    <folder>
-      <path>src</path>
-      <package>ZRAP_DEMO</package>
-    </folder>
-  </folders>
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DATA>
+    <MASTER_LANGUAGE>E</MASTER_LANGUAGE>
+    <STARTING_FOLDER>/src/</STARTING_FOLDER>
+    <FOLDER_LOGIC>PREFIX</FOLDER_LOGIC>
+   </DATA>
+  </asx:values>
+ </asx:abap>
 </abapGit>
