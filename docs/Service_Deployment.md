@@ -32,7 +32,7 @@ Testing the service
 
 - Example: Create Department (Draft flow)
   - POST to /sap/opu/odata4/sap/ZRAP_DEMO_SRV/Departments
-  - Use sample payloads in src/sample/service_test_payloads.json
+  - Use sample payloads in docs/service_test_payloads.json
 
 - Example: Call action (CopyDepartment)
   - POST to /sap/opu/odata4/sap/ZRAP_DEMO_SRV/Departments/$action/CopyDepartment
