@@ -21,6 +21,8 @@ CLASS zhr_rapv1_bp_deptemp DEFINITION PUBLIC FINAL CREATE PUBLIC.
     CLASS-METHODS validate_email
       IMPORTING iv_email TYPE string
       RETURNING VALUE(rv_error) TYPE string.
+protected section.
+private section.
 ENDCLASS.
 
 CLASS zhr_rapv1_bp_deptemp IMPLEMENTATION.
