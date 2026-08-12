@@ -13,8 +13,6 @@ CLASS zhr_rapv1_util DEFINITION PUBLIC FINAL CREATE PUBLIC.
     CLASS-METHODS auth_check_emp
       IMPORTING iv_action TYPE string
       RETURNING VALUE(rv_allowed) TYPE abap_bool.
-protected section.
-private section.
 ENDCLASS.
 
 CLASS zhr_rapv1_util IMPLEMENTATION.
@@ -27,5 +25,12 @@ CLASS zhr_rapv1_util IMPLEMENTATION.
     rv_status = zhr_rapv1_const=>c_status_active.
   ENDMETHOD.
 
-CLASS ZRAP_DEMO_UTIL IMPLEMENTATION.
+  METHOD auth_check.
+    "Stub: allow everything by default. Replace with PFCG checks as needed.
+    rv_allowed = abap_true.
+  ENDMETHOD.
+
+  METHOD auth_check_emp.
+    rv_allowed = abap_true.
+  ENDMETHOD.
 ENDCLASS.

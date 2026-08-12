@@ -25,8 +25,6 @@ CLASS zhr_rapv1_val DEFINITION PUBLIC FINAL CREATE PUBLIC.
                 iv_empname TYPE string
                 iv_email   TYPE string
       RETURNING VALUE(rv_error) TYPE string.
-protected section.
-private section.
 ENDCLASS.
 
 CLASS zhr_rapv1_val IMPLEMENTATION.
@@ -36,6 +34,11 @@ CLASS zhr_rapv1_val IMPLEMENTATION.
     ENDIF.
   ENDMETHOD.
 
+  METHOD validate_employee_name.
+    IF iv_name IS INITIAL.
+      rv_error = 'Employee name is mandatory'.
+    ENDIF.
+  ENDMETHOD.
 
   METHOD validate_salary.
     IF iv_salary < 0.
