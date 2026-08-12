@@ -1,7 +1,0 @@
-{
-  "BASEINFO": {
-    "FROM": [
-      "ZRAP_ABAP_PVT_I_EMPLOYEE"
-    ]
-  }
-}

@@ -1,0 +1,7 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "ZHR_RAPV1_DEPT"
+    ]
+  }
+}
